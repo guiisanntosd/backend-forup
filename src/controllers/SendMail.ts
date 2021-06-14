@@ -28,7 +28,7 @@ class SendMail {
       abortEarly: false
     })
 
-    const npsPath = (template: string) => resolve(__dirname, '..', 'views', 'emails', `${template}.hbs`)
+    const npsPath = (template: string) => resolve(__dirname, '..', '..', 'views', 'emails', `${template}.hbs`)
 
     await SendMailService.execute(process.env.EMAIL_HOST, 'Lead - Agência ForUp', data, npsPath('lead'))
     await SendMailService.execute(email, 'Contato - Agência ForUp', data, npsPath('contact'))
