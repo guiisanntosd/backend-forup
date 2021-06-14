@@ -10,8 +10,8 @@ class SendMailService {
 
   constructor() {
     const transporter = nodemailer.createTransport({
-      host: SMTP_CONFIG.host,
-      port: SMTP_CONFIG.port,
+      host: "smtp.gmail.com",
+      port:587,
       secure: false,
       auth: {
         user: SMTP_CONFIG.user,
